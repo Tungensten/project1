@@ -1,0 +1,86 @@
+p {
+    color: rgb(0, 0, 0);
+}
+   
+@keyframes rotation 
+{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+
+@font-face 
+{
+    font-family: 'Inter'; 
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Inter-Regular.woff2?v=3.19") format("woff2"),
+         url("Inter-Regular.woff?v=3.19") format("woff");}
+
+body {
+    background-image: url(./background.jpg);
+    max-width: 1280px;
+    min-width: 320px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.notfound-div 
+{
+    visibility: hidden;
+}
+
+.container 
+{
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ justify-content: center;
+ vertical-align: middle;
+
+}
+
+.notfound-ssilka 
+{
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Inter'; 
+    position: relative;
+    z-index: 2;
+}
+
+.notfound-img
+{
+    width: 320px;
+    height: 320px;
+    position: relative;
+    top: -350;
+   right: -220;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.rotation 
+{
+  animation: rotation 8s infinite linear;
+}
+.notfound-div 
+{
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Inter'; 
+    position: relative;
+    z-index: 2;
+}
+
+h1.notfound-ssilka:hover + .notfound-div {
+    visibility: visible;
+}
